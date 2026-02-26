@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- K Favicon - 断开设计 -->
+  <rect width="32" height="32" rx="6" fill="#1E293B"/>
+  <!-- 竖线 -->
+  <rect x="4" y="5" width="5" height="22" fill="white"/>
+  <!-- 上斜线 -->
+  <path d="M10 5H18L28 15V17H22L14 9V17H10V5Z" fill="white"/>
+  <!-- 下斜线 -->
+  <path d="M10 15H14L22 23V15H28V17L18 27H10V15Z" fill="white"/>
+</svg>
