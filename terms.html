@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+  <title>服务条款 - 启霖智联 Kylink</title>
+  <meta name="description" content="启霖智联服务条款 - 使用我们服务的条款和条件。">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              200: '#C7D2FE',
+              300: '#A5B4FC',
+              400: '#818CF8',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+              800: '#3730A3',
+              900: '#312E81',
+            }
+          },
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              'PingFang SC',
+              'Hiragino Sans GB',
+              'Microsoft YaHei',
+              'Noto Sans SC',
+              'system-ui',
+              'sans-serif'
+            ],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .prose h2 {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-slate-50">
+  
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="./images/k-logo.svg" alt="启霖智联 Kylink" class="h-7 w-auto">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-24">
+          
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button class="text-gray-600 hover:text-slate-900 transition-colors flex items-center text-sm">
+              服务
+              <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="/services/consulting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">企业咨询</a>
+              <a href="/services/market-analysis.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">市场分析</a>
+            </div>
+          </div>
+          
+          <!-- Products Dropdown -->
+          <div class="relative group">
+            <button class="text-gray-600 hover:text-slate-900 transition-colors flex items-center text-sm">
+              产品
+              <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="https://kylinkai.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI工具</a>
+              <a href="/products/wms.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">海外仓WMS</a>
+            </div>
+          </div>
+          
+          <a href="/cases.html" class="text-gray-600 hover:text-slate-900 transition-colors text-sm">案例</a>
+          <a href="/about.html" class="text-gray-600 hover:text-slate-900 transition-colors text-sm">关于我们</a>
+        </div>
+        
+        <!-- Right side -->
+        <div class="hidden md:flex items-center space-x-3">
+          <!-- Language Switch -->
+          <button id="langSwitch" class="flex items-center space-x-1 text-sm border border-gray-300 rounded-full px-2 py-0.5 hover:border-gray-400 transition-colors">
+            <span class="text-slate-900 font-medium">中</span>
+            <span class="text-gray-400">/</span>
+            <span class="text-gray-400 hover:text-slate-900 transition-colors">EN</span>
+          </button>
+          <!-- CTA Button -->
+          <a href="/contact.html" class="bg-slate-900 text-white px-4 py-1.5 rounded-md text-sm font-medium hover:bg-slate-800 transition-all duration-300">
+            联系我们
+          </a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="md:hidden text-slate-900 p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white md:hidden shadow-xl">
+      <div class="p-6">
+        <button id="closeMobileMenu" class="text-slate-900 mb-8">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="flex flex-col space-y-4">
+          <a href="/services/consulting.html" class="text-gray-600 hover:text-slate-900 py-2">企业咨询</a>
+          <a href="/services/market-analysis.html" class="text-gray-600 hover:text-slate-900 py-2">市场分析</a>
+          <a href="https://kylinkai.com" class="text-gray-600 hover:text-slate-900 py-2">AI工具</a>
+          <a href="/products/wms.html" class="text-gray-600 hover:text-slate-900 py-2">海外仓WMS</a>
+          <a href="/cases.html" class="text-gray-600 hover:text-slate-900 py-2">案例</a>
+          <a href="/about.html" class="text-gray-600 hover:text-slate-900 py-2">关于我们</a>
+          <a href="/contact.html" class="bg-slate-900 text-white px-6 py-2.5 rounded-md font-medium text-center mt-4">
+            联系我们
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <main class="pt-24 pb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">服务条款</h1>
+        <p class="text-lg text-gray-500 mb-4">Terms of Service</p>
+        <p class="text-sm text-gray-500">最后更新：2026年2月26日</p>
+      </div>
+      
+      <!-- Content -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 sm:p-12 prose max-w-none">
+        
+        <!-- Section 1: Acceptance -->
+        <h2 class="text-xl font-semibold text-slate-900 mt-0 mb-4">1. 条款接受</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          欢迎使用启霖智联（Kylink Intelligence Limited）的服务。通过访问或使用我们的网站和服务，您表示已阅读、理解并同意受本服务条款的约束。如果您不同意这些条款，请勿使用我们的服务。
+        </p>
+        
+        <!-- Section 2: Services Description -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">2. 服务描述</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          启霖智联提供以下服务：
+        </p>
+        <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-8 space-y-2">
+          <li><strong>企业咨询服务</strong>：市场分析、战略规划、落地执行等咨询服务</li>
+          <li><strong>AI工具产品</strong>：智能工具平台，帮助中小企业提升效率</li>
+          <li><strong>海外仓WMS系统</strong>：跨境电商仓储管理解决方案</li>
+        </ul>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          我们保留随时修改、暂停或终止任何服务的权利，恕不另行通知。
+        </p>
+        
+        <!-- Section 3: User Obligations -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">3. 用户义务</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          使用我们的服务时，您同意：
+        </p>
+        <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-8 space-y-2">
+          <li>提供真实、准确、完整的信息</li>
+          <li>及时更新您的账户信息</li>
+          <li>保护您的账户密码安全</li>
+          <li>不对我们的服务进行逆向工程、破解或试图获取源代码</li>
+          <li>不使用我们的服务从事任何违法或侵权活动</li>
+          <li>不干扰或破坏我们服务的正常运行</li>
+        </ul>
+        
+        <!-- Section 4: Intellectual Property -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">4. 知识产权</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          本网站及其所有内容，包括但不限于文字、图片、标志、图标、软件、数据和其他材料，均受著作权法、商标法和其他知识产权法律的保护。
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          "启霖智联"、"Kylink"及相关标志是我们或其许可方的商标。未经我们事先书面许可，您不得使用我们的商标。
+        </p>
+        
+        <!-- Section 5: Payment Terms -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">5. 付款条款</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          对于付费服务：
+        </p>
+        <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-8 space-y-2">
+          <li>服务价格将在购买前明确告知</li>
+          <li>付款方式包括银行转账、信用卡等，具体以我们提供的选项为准</li>
+          <li>除法律另有规定或双方另有约定外，已支付的费用不予退还</li>
+          <li>我们保留调整服务价格的权利，调整将提前通知</li>
+        </ul>
+        
+        <!-- Section 6: Confidentiality -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">6. 保密条款</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          双方在合作过程中可能接触到对方的保密信息。双方承诺对保密信息予以保密，未经对方书面同意，不得向第三方披露。保密义务在本条款终止后仍然有效。
+        </p>
+        
+        <!-- Section 7: Disclaimers -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">7. 免责声明</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          我们的服务按"现状"和"可用"基础提供。在法律允许的最大范围内：
+        </p>
+        <ul class="list-disc list-inside text-gray-600 leading-relaxed mb-8 space-y-2">
+          <li>我们不保证服务将不间断、及时、安全或无错误</li>
+          <li>我们不对服务内容或使用结果作任何明示或暗示的保证</li>
+          <li>我们不对任何间接、偶然、特殊、惩罚性或后果性损害承担责任</li>
+          <li>咨询服务的建议仅供参考，最终决策由您自行承担风险</li>
+        </ul>
+        
+        <!-- Section 8: Limitation of Liability -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">8. 责任限制</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          在法律允许的最大范围内，启霖智联对任何损害的累计责任不超过您就相关服务向我们支付的金额（如有）。
+        </p>
+        
+        <!-- Section 9: Indemnification -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">9. 赔偿</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          您同意赔偿、辩护并使启霖智联及其董事、员工、代理免受因您违反本条款、侵犯第三方权利或使用我们的服务而产生的任何索赔、损失、费用或损害。
+        </p>
+        
+        <!-- Section 10: Termination -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">10. 终止</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          我们有权因任何理由（包括但不限于您违反本条款）立即终止或暂停您对我们服务的访问，恕不另行通知。终止后，您使用服务的权利将立即停止。本条款中应合理存续的条款在终止后继续有效。
+        </p>
+        
+        <!-- Section 11: Governing Law -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">11. 适用法律与争议解决</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          本条款受香港特别行政区法律管辖，并依其解释。
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          因本条款或我们的服务引起的或与之相关的任何争议，双方应首先通过友好协商解决。如协商不成，争议应提交香港国际仲裁中心根据其当时有效的仲裁规则进行仲裁。
+        </p>
+        
+        <!-- Section 12: Changes -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">12. 条款变更</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          我们保留随时修改本服务条款的权利。修改后的条款将在本页面发布，并在页面顶部显示"最后更新"日期。继续使用我们的服务即表示您接受修改后的条款。如您不同意修改后的条款，应停止使用我们的服务。
+        </p>
+        
+        <!-- Section 13: Severability -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">13. 可分割性</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          如本条款的任何条款被有管辖权的法院认定为无效或不可执行，该条款应在最小必要范围内被修改或解释，以使其有效和可执行，本条款其余部分继续完全有效。
+        </p>
+        
+        <!-- Section 14: Entire Agreement -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">14. 完整协议</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          本条款连同我们的隐私政策构成您与我们之间关于使用我们服务的完整协议，并取代之前或同期的所有口头或书面协议。
+        </p>
+        
+        <!-- Section 15: Contact -->
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">15. 联系我们</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          如果您对本服务条款有任何疑问，请通过以下方式联系我们：
+        </p>
+        <div class="bg-slate-50 rounded-lg p-6 mb-8">
+          <p class="text-gray-700 mb-2"><strong>启霖智联 Kylink Intelligence Limited</strong></p>
+          <p class="text-gray-600 mb-1">邮箱：<a href="mailto:contact@kylink.hk" class="text-primary-600 hover:text-primary-700">contact@kylink.hk</a></p>
+          <p class="text-gray-600">地址：香港</p>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        
+        <!-- Brand -->
+        <div class="col-span-2">
+          <a href="/" class="flex items-center space-x-2 mb-4">
+            <span class="text-2xl font-bold text-white">K</span>
+            <span class="text-xl font-semibold text-white">启霖智联</span>
+          </a>
+          <p class="text-gray-400 mb-2">启迪智慧，连接世界</p>
+          <p class="text-sm text-gray-500">全方位赋能企业全球化增长</p>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">服务</h4>
+          <ul class="space-y-2">
+            <li><a href="/services/consulting.html" class="hover:text-white transition-colors">企业咨询</a></li>
+            <li><a href="/services/market-analysis.html" class="hover:text-white transition-colors">市场分析</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">产品</h4>
+          <ul class="space-y-2">
+            <li><a href="https://kylinkai.com" class="hover:text-white transition-colors">AI工具</a></li>
+            <li><a href="/products/wms.html" class="hover:text-white transition-colors">海外仓WMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">公司</h4>
+          <ul class="space-y-2">
+            <li><a href="/about.html" class="hover:text-white transition-colors">关于我们</a></li>
+            <li><a href="/cases.html" class="hover:text-white transition-colors">案例</a></li>
+            <li><a href="/news.html" class="hover:text-white transition-colors">新闻动态</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          
+          <!-- Social links -->
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/></svg>
+            </a>
+          </div>
+          
+          <!-- Copyright & Legal -->
+          <div class="flex items-center space-x-6 text-sm text-gray-500">
+            <span>© 2026 Kylink Intelligence Limited. All rights reserved.</span>
+            <a href="/privacy.html" class="hover:text-white transition-colors">隐私政策</a>
+            <a href="/terms.html" class="hover:text-white transition-colors text-white">服务条款</a>
+          </div>
+          
+          <!-- Language -->
+          <div class="flex items-center space-x-2 text-sm">
+            <button class="text-white">中文</button>
+            <span class="text-gray-600">|</span>
+            <button class="text-gray-500 hover:text-white transition-colors">English</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
