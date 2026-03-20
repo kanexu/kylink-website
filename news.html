@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+  <title>新闻动态 - 启霖智联 Kylink Intelligence</title>
+  <meta name="description" content="启霖智联新闻动态，了解官网更新、产品进展与企业全球化服务观点。">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EEF2FF', 100: '#E0E7FF', 200: '#C7D2FE', 300: '#A5B4FC',
+              400: '#818CF8', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA',
+              800: '#3730A3', 900: '#312E81',
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .hero-gradient { background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="./" class="flex items-center">
+          <img src="./images/k-logo.svg" alt="启霖智联 Kylink" class="h-7 w-auto">
+        </a>
+
+        <div class="hidden md:flex items-center gap-24">
+          <div class="relative group">
+            <button class="text-gray-600 hover:text-slate-900 transition-colors flex items-center text-sm">服务
+              <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="./services/consulting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">企业咨询</a>
+              <a href="./services/market-analysis.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">市场分析</a>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="text-gray-600 hover:text-slate-900 transition-colors flex items-center text-sm">产品
+              <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="https://kylinkai.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI工具</a>
+              <a href="./products/wms.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">海外仓WMS</a>
+            </div>
+          </div>
+          <a href="./cases.html" class="text-gray-600 hover:text-slate-900 transition-colors text-sm">案例</a>
+          <a href="./about.html" class="text-gray-600 hover:text-slate-900 transition-colors text-sm">关于我们</a>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-3">
+          <button id="langSwitch" class="flex items-center space-x-1 text-sm border border-gray-300 rounded-full px-2 py-0.5 hover:border-gray-400 transition-colors">
+            <span class="text-slate-900 font-medium">中</span>
+            <span class="text-gray-400">/</span>
+            <span class="text-gray-400 hover:text-slate-900 transition-colors">EN</span>
+          </button>
+          <a href="./contact.html" class="bg-slate-900 text-white px-4 py-1.5 rounded-md text-sm font-medium hover:bg-slate-800 transition-all duration-300">联系我们</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden text-slate-900 p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white md:hidden shadow-xl">
+      <div class="p-6">
+        <button id="closeMobileMenu" class="text-slate-900 mb-8">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="flex flex-col space-y-4">
+          <a href="./services/consulting.html" class="text-gray-600 hover:text-slate-900 py-2">企业咨询</a>
+          <a href="./services/market-analysis.html" class="text-gray-600 hover:text-slate-900 py-2">市场分析</a>
+          <a href="https://kylinkai.com" class="text-gray-600 hover:text-slate-900 py-2">AI工具</a>
+          <a href="./products/wms.html" class="text-gray-600 hover:text-slate-900 py-2">海外仓WMS</a>
+          <a href="./cases.html" class="text-gray-600 hover:text-slate-900 py-2">案例</a>
+          <a href="./about.html" class="text-gray-600 hover:text-slate-900 py-2">关于我们</a>
+          <a href="./contact.html" class="bg-slate-900 text-white px-6 py-2.5 rounded-md font-medium text-center mt-4">联系我们</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-600/20 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-primary-200 text-sm font-medium mb-5">
+          <span class="w-2 h-2 rounded-full bg-primary-400"></span>
+          Newsroom
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">新闻动态</h1>
+        <p class="text-xl text-gray-300 mb-2">Kylink Updates</p>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">记录启霖智联官网更新、产品进展与企业全球化服务观察。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">重点更新</h2>
+          <p class="text-lg text-gray-600 max-w-2xl">围绕官网建设、服务页面完善和产品沟通入口的最新动态。</p>
+        </div>
+        <a href="./contact.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+          获取详细介绍
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <article class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="flex items-center justify-between text-sm mb-5">
+            <span class="inline-flex px-3 py-1 rounded-full bg-primary-100 text-primary-700 font-medium">官网更新</span>
+            <time class="text-gray-500">2026-03-20</time>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">新闻页与联系链路完成补齐</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">新增新闻动态页，统一站内链接路径，并为联系表单补充可用的邮件提交反馈逻辑。</p>
+          <a href="#update-launch" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            查看详情
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </article>
+
+        <article class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="flex items-center justify-between text-sm mb-5">
+            <span class="inline-flex px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 font-medium">产品页面</span>
+            <time class="text-gray-500">2026-03-12</time>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">海外仓 WMS 信息页完成对外展示</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">围绕多仓协同、库存可视和效率提升等核心能力，对外展示 WMS 方案价值与适用场景。</p>
+          <a href="#update-wms" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            查看详情
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </article>
+
+        <article class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="flex items-center justify-between text-sm mb-5">
+            <span class="inline-flex px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 font-medium">官网首发</span>
+            <time class="text-gray-500">2026-02-26</time>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">企业官网核心页面首轮上线</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">首页、案例、关于、联系页以及服务与产品详情页完成首轮交付，形成完整的企业展示框架。</p>
+          <a href="#update-core" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            查看详情
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updates Timeline -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">动态一览</h2>
+        <p class="text-lg text-gray-600">从内容建设到产品介绍，逐步完善启霖智联对外展示体系。</p>
+      </div>
+
+      <div class="space-y-8">
+        <article id="update-launch" class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div class="lg:w-3/4">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-medium">官网更新</span>
+                <time class="text-sm text-gray-500">2026-03-20</time>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">站内导航与法律页面链路整理完成</h3>
+              <p class="text-gray-600 leading-relaxed mb-4">本次更新新增新闻动态页，补齐原先存在但未落地的入口页面，同时将部分使用根路径的链接改为兼容静态部署的相对路径，减少 GitHub Pages 项目路径下的跳转异常。</p>
+              <p class="text-gray-600 leading-relaxed">联系页面也同步补上了邮件客户端提交方案。用户填写表单后可直接生成邮件草稿并发送到官方邮箱，提高静态站点场景下的可用性。</p>
+            </div>
+            <div class="lg:w-1/4 bg-slate-50 rounded-2xl p-6">
+              <h4 class="text-sm font-semibold text-slate-900 mb-4">本次包含</h4>
+              <ul class="space-y-3 text-sm text-gray-600">
+                <li>新增新闻动态页面</li>
+                <li>统一站内相对路径</li>
+                <li>完善联系表单反馈</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article id="update-wms" class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div class="lg:w-3/4">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium">产品页面</span>
+                <time class="text-sm text-gray-500">2026-03-12</time>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">WMS 页面补充产品价值与使用场景</h3>
+              <p class="text-gray-600 leading-relaxed mb-4">围绕跨境仓储业务的核心痛点，页面重点展示了多仓管理、智能拣货、库存同步与数据可视化等能力，帮助潜在客户快速理解产品定位。</p>
+              <p class="text-gray-600 leading-relaxed">这部分内容也承担了产品站搭建前的过渡职责，让官网先具备清晰的方案介绍入口与基础转化能力。</p>
+            </div>
+            <div class="lg:w-1/4 bg-slate-50 rounded-2xl p-6">
+              <h4 class="text-sm font-semibold text-slate-900 mb-4">适用对象</h4>
+              <ul class="space-y-3 text-sm text-gray-600">
+                <li>跨境电商卖家</li>
+                <li>海外仓运营方</li>
+                <li>第三方物流服务商</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article id="update-core" class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div class="lg:w-3/4">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="inline-flex px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium">官网首发</span>
+                <time class="text-sm text-gray-500">2026-02-26</time>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">企业官网核心内容完成首轮搭建</h3>
+              <p class="text-gray-600 leading-relaxed mb-4">首轮上线覆盖首页、关于我们、成功案例、联系我们、企业咨询服务、市场分析服务和海外仓 WMS 产品页，为客户展示“AI × 供应链 × 出海”的整体业务框架。</p>
+              <p class="text-gray-600 leading-relaxed">该阶段重点解决品牌表达、服务结构和基础转化入口，后续将继续补充真实案例、合作伙伴信息和多语言内容。</p>
+            </div>
+            <div class="lg:w-1/4 bg-slate-50 rounded-2xl p-6">
+              <h4 class="text-sm font-semibold text-slate-900 mb-4">阶段成果</h4>
+              <ul class="space-y-3 text-sm text-gray-600">
+                <li>建立统一视觉风格</li>
+                <li>完成核心服务介绍</li>
+                <li>上线基础转化入口</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outlook -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="bg-slate-900 rounded-3xl p-8 text-white">
+          <p class="text-sm uppercase tracking-[0.2em] text-primary-300 mb-4">Next</p>
+          <h2 class="text-3xl font-bold mb-4">后续内容方向</h2>
+          <p class="text-gray-300 leading-relaxed mb-8">未来将继续围绕真实客户案例、AI 工具产品信息以及英文版内容做增量更新，逐步提升官网的完整度与转化能力。</p>
+          <div class="space-y-4 text-sm text-gray-300">
+            <div class="flex items-start">
+              <span class="w-2 h-2 rounded-full bg-primary-400 mt-2 mr-3"></span>
+              <span>补充真实合作伙伴与客户案例素材</span>
+            </div>
+            <div class="flex items-start">
+              <span class="w-2 h-2 rounded-full bg-primary-400 mt-2 mr-3"></span>
+              <span>完善 AI 产品站与官网之间的协同入口</span>
+            </div>
+            <div class="flex items-start">
+              <span class="w-2 h-2 rounded-full bg-primary-400 mt-2 mr-3"></span>
+              <span>扩充英文内容与 SEO 基础配置</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">需要了解更详细的进展？</h2>
+          <p class="text-gray-600 leading-relaxed mb-8">如果您想进一步了解企业咨询、海外仓 WMS 或 AI 工具方向的合作方式，可以直接通过联系页面提交需求。</p>
+          <a href="./contact.html" class="inline-flex items-center bg-slate-900 text-white px-8 py-3.5 rounded-md font-semibold text-lg hover:bg-slate-800 transition-all duration-300">
+            联系我们
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="col-span-2">
+          <a href="./" class="flex items-center mb-4">
+            <img src="./images/k-logo.svg" alt="启霖智联" class="h-7">
+          </a>
+          <p class="text-gray-400 mb-2">启迪智慧，连接世界</p>
+          <p class="text-sm text-gray-500">全方位赋能企业全球化增长</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">服务</h4>
+          <ul class="space-y-2">
+            <li><a href="./services/consulting.html" class="hover:text-white transition-colors">企业咨询</a></li>
+            <li><a href="./services/market-analysis.html" class="hover:text-white transition-colors">市场分析</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">产品</h4>
+          <ul class="space-y-2">
+            <li><a href="https://kylinkai.com" class="hover:text-white transition-colors">AI工具</a></li>
+            <li><a href="./products/wms.html" class="hover:text-white transition-colors">海外仓WMS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">公司</h4>
+          <ul class="space-y-2">
+            <li><a href="./about.html" class="hover:text-white transition-colors">关于我们</a></li>
+            <li><a href="./cases.html" class="hover:text-white transition-colors">案例</a></li>
+            <li><a href="./news.html" class="hover:text-white transition-colors text-white">新闻动态</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.003z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
+          <div class="flex items-center space-x-6 text-sm text-gray-500">
+            <span>© 2026 Kylink Intelligence Limited. All rights reserved.</span>
+            <a href="./privacy.html" class="hover:text-white transition-colors">隐私政策</a>
+            <a href="./terms.html" class="hover:text-white transition-colors">服务条款</a>
+          </div>
+          <div class="flex items-center space-x-2 text-sm">
+            <button class="text-white">中文</button>
+            <span class="text-gray-600">|</span>
+            <button class="text-gray-500 hover:text-white transition-colors">English</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
