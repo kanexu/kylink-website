@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
   
   window.addEventListener('scroll', function() {
+    if (!navbar) {
+      return;
+    }
+
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 50) {
@@ -17,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.add('bg-white/95');
     }
     
-    lastScroll = currentScroll;
   });
   
   // Mobile menu toggle
@@ -65,25 +67,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Language switch
-  const langSwitch = document.getElementById('langSwitch');
-  if (langSwitch) {
-    const spans = langSwitch.querySelectorAll('span');
-    langSwitch.addEventListener('click', function() {
-      // Toggle active state
-      spans[0].classList.toggle('text-slate-900');
-      spans[0].classList.toggle('text-gray-400');
-      spans[2].classList.toggle('text-slate-900');
-      spans[2].classList.toggle('text-gray-400');
-      // In a real implementation, this would redirect to the language-specific page
-    });
-  }
-
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     const contactStatus = document.getElementById('contactFormStatus');
     const contactSubmit = document.getElementById('contactSubmit');
     const recipient = 'contact@kylink.hk';
+    const isChinesePage = document.documentElement.lang.toLowerCase().startsWith('zh');
+    const submitDefaultText = contactSubmit ? contactSubmit.textContent.trim() : '';
+    const copy = isChinesePage ? {
+      subjectPrefix: '官网咨询',
+      greeting: '您好，',
+      intro: '我想咨询以下事项：',
+      nameLabel: '姓名',
+      companyLabel: '公司',
+      emailLabel: '邮箱',
+      phoneLabel: '电话',
+      inquiryLabel: '咨询类型',
+      messageLabel: '留言内容',
+      notProvided: '未填写',
+      status: '已为您生成邮件草稿。若邮件客户端未自动打开，请直接发送至 contact@kylink.hk。',
+      opening: '正在打开邮件客户端...'
+    } : {
+      subjectPrefix: 'Website Inquiry',
+      greeting: 'Hello,',
+      intro: 'I would like to discuss the following:',
+      nameLabel: 'Name',
+      companyLabel: 'Company',
+      emailLabel: 'Email',
+      phoneLabel: 'Phone',
+      inquiryLabel: 'Inquiry Type',
+      messageLabel: 'Message',
+      notProvided: 'Not provided',
+      status: 'Your email draft is ready. If your email client did not open automatically, please send your message to contact@kylink.hk.',
+      opening: 'Opening email client...'
+    };
 
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -100,36 +117,36 @@ document.addEventListener('DOMContentLoaded', function() {
       const inquiry = (formData.get('inquiry') || '').toString().trim();
       const message = (formData.get('message') || '').toString().trim();
 
-      const subject = ['官网咨询', inquiry, company || name].filter(Boolean).join(' | ');
+      const subject = [copy.subjectPrefix, inquiry, company || name].filter(Boolean).join(' | ');
       const body = [
-        '您好，',
+        copy.greeting,
         '',
-        '我想咨询以下事项：',
+        copy.intro,
         '',
-        '姓名：' + name,
-        '公司：' + (company || '未填写'),
-        '邮箱：' + email,
-        '电话：' + (phone || '未填写'),
-        '咨询类型：' + inquiry,
+        copy.nameLabel + ': ' + name,
+        copy.companyLabel + ': ' + (company || copy.notProvided),
+        copy.emailLabel + ': ' + email,
+        copy.phoneLabel + ': ' + (phone || copy.notProvided),
+        copy.inquiryLabel + ': ' + inquiry,
         '',
-        '留言内容：',
+        copy.messageLabel + ':',
         message
       ].join('\n');
 
       if (contactStatus) {
         contactStatus.className = 'rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700';
-        contactStatus.textContent = '已为您生成邮件草稿。若邮件客户端未自动打开，请直接发送至 contact@kylink.hk。';
+        contactStatus.textContent = copy.status;
       }
 
       if (contactSubmit) {
         contactSubmit.disabled = true;
         contactSubmit.classList.add('opacity-70', 'cursor-not-allowed');
-        contactSubmit.textContent = '正在打开邮件客户端...';
+        contactSubmit.textContent = copy.opening;
 
         window.setTimeout(function() {
           contactSubmit.disabled = false;
           contactSubmit.classList.remove('opacity-70', 'cursor-not-allowed');
-          contactSubmit.textContent = '发送消息';
+          contactSubmit.textContent = submitDefaultText;
         }, 1800);
       }
 
