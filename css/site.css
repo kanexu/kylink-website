@@ -24,12 +24,12 @@ nav {
 
 nav img[src$="kylink-logo.svg"],
 nav img[src$="k-logo.svg"] {
-  height: 2.25rem;
+  height: 2.5rem;
 }
 
 footer img[src$="kylink-logo-light.svg"],
 footer img[src$="k-logo-light.svg"] {
-  height: 2.35rem;
+  height: 2.5rem;
 }
 
 .hero-gradient {
@@ -273,8 +273,8 @@ a[aria-disabled="true"] {
 @media (max-width: 768px) {
   nav img[src$="kylink-logo.svg"],
   nav img[src$="k-logo.svg"] {
-    height: 2rem;
-    max-width: 188px;
+    height: 2.25rem;
+    max-width: 176px;
   }
 
   .hero-ops-panel {

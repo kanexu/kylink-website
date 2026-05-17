@@ -1,12 +1,12 @@
-<svg width="250" height="48" viewBox="0 0 250 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kylinkLogoTitle">
-  <title id="kylinkLogoTitle">Kylink Intelligence</title>
+<svg width="150" height="48" viewBox="0 0 150 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kaiLogoTitle">
+  <title id="kaiLogoTitle">K.AI</title>
   <defs>
     <mask id="routeCut" maskUnits="userSpaceOnUse" x="40" y="40" width="340" height="220">
       <rect x="40" y="40" width="340" height="220" fill="white"/>
       <path d="M90 168C128 132 176 118 236 132C262 138 286 150 310 166" stroke="black" stroke-width="13" stroke-linecap="round"/>
     </mask>
   </defs>
-  <g transform="translate(-4 0) scale(0.16)">
+  <g transform="translate(-6 2) scale(0.15)">
     <g mask="url(#routeCut)">
       <path d="M112 220V80" stroke="#0B1220" stroke-width="36" stroke-linecap="round"/>
       <path d="M132 150L258 78" stroke="#123A73" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,6 +16,5 @@
     <circle cx="78" cy="208" r="8" fill="#B96B46"/>
     <circle cx="306" cy="192" r="8" fill="#B96B46"/>
   </g>
-  <text x="58" y="29" fill="#0B1220" font-family="Avenir Next, Inter, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="750" letter-spacing="0">Kylink</text>
-  <text x="60" y="43" fill="#667085" font-family="Avenir Next, Inter, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="1.4">INTELLIGENCE</text>
+  <text x="52" y="33" fill="#0B1220" font-family="Avenir Next, Inter, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="760" letter-spacing="0">K.AI</text>
 </svg>
