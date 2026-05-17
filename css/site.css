@@ -1,0 +1,297 @@
+:root {
+  --ink: #0b1220;
+  --ink-soft: #162033;
+  --navy: #123a73;
+  --copper: #b96b46;
+  --paper: #f7f8fa;
+  --line: #e4e8ef;
+  --muted: #667085;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+nav {
+  border-bottom: 1px solid rgba(228, 232, 239, 0.9);
+  box-shadow: 0 10px 30px rgba(11, 18, 32, 0.05);
+}
+
+nav img[src$="kylink-logo.svg"],
+nav img[src$="k-logo.svg"] {
+  height: 2.25rem;
+}
+
+footer img[src$="kylink-logo-light.svg"],
+footer img[src$="k-logo-light.svg"] {
+  height: 2.35rem;
+}
+
+.hero-gradient {
+  background:
+    linear-gradient(135deg, rgba(11, 18, 32, 0.98) 0%, rgba(18, 58, 115, 0.95) 52%, rgba(11, 18, 32, 0.98) 100%) !important;
+  isolation: isolate;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(220, 230, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 230, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(120deg, transparent 0%, rgba(185, 107, 70, 0.18) 42%, transparent 72%);
+  background-size: 54px 54px, 54px 54px, 100% 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45));
+  z-index: 0;
+}
+
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 14%;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(200, 118, 72, 0.72), rgba(220, 230, 255, 0.34), transparent);
+  transform: skewY(-4deg);
+  z-index: 0;
+}
+
+.hero-gradient .blur-3xl {
+  opacity: 0 !important;
+}
+
+.hero-gradient > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--navy), var(--copper)) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.rounded-2xl {
+  border-radius: 8px !important;
+}
+
+.rounded-xl {
+  border-radius: 8px !important;
+}
+
+.shadow-lg,
+.shadow-xl,
+.hover\:shadow-xl:hover {
+  box-shadow: 0 18px 42px rgba(11, 18, 32, 0.08) !important;
+}
+
+.card-hover,
+article.bg-white,
+section .bg-white.shadow-lg,
+section .bg-slate-50.rounded-2xl,
+section .bg-gradient-to-br.rounded-2xl {
+  border: 1px solid rgba(228, 232, 239, 0.96);
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(18, 58, 115, 0.22);
+}
+
+.bg-gradient-to-r.from-primary-600.to-purple-600 {
+  background-image: linear-gradient(135deg, #123a73 0%, #0b1220 100%) !important;
+}
+
+.bg-gradient-to-r.from-cyan-600.to-blue-600 {
+  background-image: linear-gradient(135deg, #0e7490 0%, #123a73 100%) !important;
+}
+
+.text-primary-600 {
+  color: var(--navy) !important;
+}
+
+.bg-primary-600 {
+  background-color: var(--navy) !important;
+}
+
+.bg-primary-100 {
+  background-color: #eaf0fb !important;
+}
+
+.text-primary-400,
+.text-primary-300 {
+  color: #dce6ff !important;
+}
+
+.hero-ops-panel {
+  margin: 3.5rem auto 0;
+  max-width: 920px;
+  border: 1px solid rgba(220, 230, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(11, 18, 32, 0.42);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.hero-ops-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(220, 230, 255, 0.12);
+  color: #dce6ff;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-ops-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(220, 230, 255, 0.12);
+}
+
+.hero-ops-cell {
+  min-height: 112px;
+  padding: 1rem;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    rgba(11, 18, 32, 0.72);
+  color: #f8fafc;
+  text-align: left;
+}
+
+.hero-ops-label {
+  color: #aab5c6;
+  font-size: 0.78rem;
+  margin-bottom: 0.65rem;
+}
+
+.hero-ops-value {
+  color: #f8fafc;
+  font-size: 1.45rem;
+  font-weight: 750;
+}
+
+.hero-ops-note {
+  color: #c87648;
+  font-size: 0.78rem;
+  margin-top: 0.5rem;
+}
+
+.wms-dashboard {
+  background: var(--ink);
+  border: 1px solid rgba(220, 230, 255, 0.12);
+  color: #f8fafc;
+  box-shadow: 0 24px 60px rgba(11, 18, 32, 0.16);
+}
+
+.wms-dashboard .dash-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(220, 230, 255, 0.12);
+  padding: 0.9rem 1rem;
+}
+
+.wms-dashboard .dash-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--copper);
+  margin-right: 0.45rem;
+}
+
+.wms-dashboard .dash-body {
+  padding: 1rem;
+}
+
+.wms-dashboard .dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.wms-dashboard .dash-metric {
+  border: 1px solid rgba(220, 230, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.9rem;
+  background: rgba(248, 250, 252, 0.04);
+}
+
+.wms-dashboard .dash-metric span {
+  display: block;
+  color: #aab5c6;
+  font-size: 0.72rem;
+}
+
+.wms-dashboard .dash-metric strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.25rem;
+}
+
+.wms-dashboard .dash-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 0.8fr;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid rgba(220, 230, 255, 0.1);
+  padding: 0.8rem 0;
+  color: #dce6ff;
+  font-size: 0.86rem;
+}
+
+.wms-dashboard .dash-tag {
+  justify-self: start;
+  border-radius: 999px;
+  background: rgba(185, 107, 70, 0.15);
+  color: #f0b190;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.72rem;
+}
+
+a[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.58;
+}
+
+@media (max-width: 768px) {
+  nav img[src$="kylink-logo.svg"],
+  nav img[src$="k-logo.svg"] {
+    height: 2rem;
+    max-width: 188px;
+  }
+
+  .hero-ops-panel {
+    margin-top: 2.5rem;
+  }
+
+  .hero-ops-grid,
+  .wms-dashboard .dash-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ops-cell {
+    min-height: auto;
+  }
+
+  .wms-dashboard .dash-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}

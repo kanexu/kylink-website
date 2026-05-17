@@ -33,6 +33,7 @@
   <style>
     .hero-gradient { background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%); }
   </style>
+  <link rel="stylesheet" href="../css/site.css">
 </head>
 <body class="font-sans antialiased">
 
@@ -41,7 +42,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="../" class="flex items-center">
-          <img src="../images/kylink-logo.svg" alt="kylink" class="h-7 w-auto">
+          <img src="../images/kylink-logo.svg" alt="Kylink Intelligence" class="h-7 w-auto">
         </a>
         
         <div class="hidden md:flex items-center gap-24">
@@ -135,24 +136,40 @@
             </li>
           </ul>
         </div>
-        <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8">
-          <h3 class="text-xl font-semibold text-slate-900 mb-6">Operational Impact</h3>
-          <div class="grid grid-cols-2 gap-6">
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">200%</div>
-              <div class="text-gray-600">Efficiency Gain</div>
+        <div class="wms-dashboard rounded-2xl overflow-hidden">
+          <div class="dash-bar">
+            <div class="text-sm font-semibold"><span class="dash-dot"></span>Warehouse Control Tower</div>
+            <div class="text-xs text-slate-400">Live operations view</div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-metrics">
+              <div class="dash-metric">
+                <span>Picking gain</span>
+                <strong>200%</strong>
+              </div>
+              <div class="dash-metric">
+                <span>Order accuracy</span>
+                <strong>99.9%</strong>
+              </div>
+              <div class="dash-metric">
+                <span>Cost reduction</span>
+                <strong>30%</strong>
+              </div>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">99.9%</div>
-              <div class="text-gray-600">Order Accuracy</div>
+            <div class="dash-row">
+              <strong>Los Angeles WH</strong>
+              <span>1,284 orders</span>
+              <span class="dash-tag">wave picking</span>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">30%</div>
-              <div class="text-gray-600">Cost Reduction</div>
+            <div class="dash-row">
+              <strong>Frankfurt WH</strong>
+              <span>742 orders</span>
+              <span class="dash-tag">inventory sync</span>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">24/7</div>
-              <div class="text-gray-600">Technical Support</div>
+            <div class="dash-row">
+              <strong>Singapore WH</strong>
+              <span>516 orders</span>
+              <span class="dash-tag">bin alerts</span>
             </div>
           </div>
         </div>
@@ -246,7 +263,7 @@
       <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div class="col-span-2">
           <a href="../" class="flex items-center mb-4">
-            <img src="../images/kylink-logo.svg" alt="kylink" class="h-7">
+            <img src="../images/kylink-logo-light.svg" alt="Kylink Intelligence" class="h-7">
           </a>
           <p class="text-gray-400 mb-2">Link the World with Intelligence</p>
           <p class="text-sm text-gray-500">Integrated solutions for international growth</p>

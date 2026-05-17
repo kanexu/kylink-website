@@ -33,6 +33,7 @@
   <style>
     .hero-gradient { background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%); }
   </style>
+  <link rel="stylesheet" href="../../css/site.css">
 </head>
 <body class="font-sans antialiased">
 
@@ -135,24 +136,40 @@
             </li>
           </ul>
         </div>
-        <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8">
-          <h3 class="text-xl font-semibold text-slate-900 mb-6">核心数据</h3>
-          <div class="grid grid-cols-2 gap-6">
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">200%</div>
-              <div class="text-gray-600">效率提升</div>
+        <div class="wms-dashboard rounded-2xl overflow-hidden">
+          <div class="dash-bar">
+            <div class="text-sm font-semibold"><span class="dash-dot"></span>仓储运营控制台</div>
+            <div class="text-xs text-slate-400">实时作业视图</div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-metrics">
+              <div class="dash-metric">
+                <span>拣货效率</span>
+                <strong>200%</strong>
+              </div>
+              <div class="dash-metric">
+                <span>订单准确率</span>
+                <strong>99.9%</strong>
+              </div>
+              <div class="dash-metric">
+                <span>成本降低</span>
+                <strong>30%</strong>
+              </div>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">99.9%</div>
-              <div class="text-gray-600">订单准确率</div>
+            <div class="dash-row">
+              <strong>洛杉矶仓</strong>
+              <span>1,284 订单</span>
+              <span class="dash-tag">波次拣货</span>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">30%</div>
-              <div class="text-gray-600">成本降低</div>
+            <div class="dash-row">
+              <strong>法兰克福仓</strong>
+              <span>742 订单</span>
+              <span class="dash-tag">库存同步</span>
             </div>
-            <div class="text-center">
-              <div class="text-4xl font-bold text-cyan-600 mb-2">24/7</div>
-              <div class="text-gray-600">技术支持</div>
+            <div class="dash-row">
+              <strong>新加坡仓</strong>
+              <span>516 订单</span>
+              <span class="dash-tag">库位预警</span>
             </div>
           </div>
         </div>
@@ -246,7 +263,7 @@
       <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div class="col-span-2">
           <a href="../" class="flex items-center mb-4">
-            <img src="../../images/k-logo.svg" alt="启霖智联" class="h-7">
+            <img src="../../images/k-logo-light.svg" alt="启霖智联" class="h-7">
           </a>
           <p class="text-gray-400 mb-2">启迪智慧，连接世界</p>
           <p class="text-sm text-gray-500">全方位赋能企业全球化增长</p>
